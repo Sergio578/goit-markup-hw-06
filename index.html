@@ -16,7 +16,28 @@
   <!-- encabezado de la pagina con listas de navegación -->
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-      <button type="button" class="exit-button" data-modal-close>
+      <h4 class="modal__title">Deje sus datos, nos contactaremos con usted</h4>
+      <!-- <div class="modal__content"> -->
+      <form class="modal__form-content">
+        <label for="" class="form-content__data">
+          nombre
+          <input type="text" name="username" class="form-content__input">
+        </label>
+        <label for="" class="form-content__data">
+          teléfono
+          <input type="tel" name="phone__number" class="form-content__input">
+        </label>
+        <label for="" class="form-content__data">
+          email
+          <input type="email" name="email" class="form-content__input">
+        </label>
+        <label for="" class="form-content__data">
+          comentarios
+          <textarea class="" name="feedback" rows="5" placeholder="Introduzca texto"></textarea>
+        </label>
+      </form>
+      <!-- </div> -->
+      <button type="button" class="modal__icon-exit" data-modal-close>
         <svg>
           <use href="./images/icon.svg#exit-button"></use>
         </svg>
@@ -334,7 +355,6 @@
         </div>
       </div>
     </div>
-
     <div class="networks-social">
       <h4 class="title-networks">encuentranos en</h4>
       <svg class="social" width="44" height="44">
