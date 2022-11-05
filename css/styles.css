@@ -67,8 +67,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid var(--gray);
+  border: 1px solid #757575;
   cursor: pointer;
+  background-color: #fffFFF;
 }
 
 .modal__icon-exit svg {
@@ -76,8 +77,8 @@ body {
   height: 11px;
 }
 
-.modal__icon-exit svg use {
-  fill: var(--black);
+.modal__icon-exit:hover svg use {
+  fill: var(--special);
 }
 
 .modal__form-content {
@@ -86,32 +87,90 @@ body {
   left: 40px;
   width: 448px;
   height: 342px;
-  border: 1px dashed black;
+  color: #757575;
+  text-transform: capitalize;
 }
 
 .form-content__data {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 7px;
-  text-transform: capitalize;
+  margin: 0;
 }
 
 .form-content__input {
   width: 100%;
   height: 40px;
+  padding-left: 40px;
   background-color: inherit;
   margin-top: 7px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
 
-textarea {
-  margin-top: 10px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
+.form-content__input:hover .form-content__svg {
+  fill: #2196f3;
+  /* border: 1px solid var(--special); */
 }
 
+textarea {
+  margin-top: 5px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+}
+
+.form-content__accept {
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.form-content__text {
+  position: absolute;
+  top: 341px;
+  left: 34px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
+.form-content__enviar {
+  width: 200px;
+  height: 50px;
+  background-color: var(--special);
+  color: var(--white);
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  border: none;
+  position: absolute;
+  bottom: -120px;
+  left: 132px;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.form-content__svg {
+  position: relative;
+  top: -28px;
+  left: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+.form-content__svg:hover .form-content__input {
+  fill: var(--special);
+  border: 1px solid var(--special);
+}
 
 header {
   background-color: var(--white);
