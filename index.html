@@ -18,36 +18,38 @@
     <div class="modal">
       <h4 class="modal__title">Deje sus datos, nos contactaremos con usted</h4>
       <form class="modal__form-content">
-        <label for="" class="form-content__data">
+        <label for="input-name" class="form-content__data">
           nombre
-          <input type="text" name="username" class="form-content__input">
+          <input type="text" name="username" id="input-name" class="form-content__input" required>
           <svg class="form-content__svg">
             <use href="./images/icon.svg#icon-form1" />
           </svg>
         </label>
-        <label for="" class="form-content__data">
+        <label for="input-tel" class="form-content__data">
           teléfono
-          <input type="tel" name="phone__number" class="form-content__input">
+          <input type="tel" name="phone__number" id="input-tel" class="form-content__input" required>
           <svg class="form-content__svg">
             <use href="./images/icon.svg#icon-form2" />
           </svg>
         </label>
-        <label for="" class="form-content__data">
+        <label for="input-email" class="form-content__data">
           email
-          <input type="email" name="email" class="form-content__input">
+          <input type="email" name="email" id="input-email" class="form-content__input" required>
           <svg class="form-content__svg">
             <use href="./images/icon.svg#icon-form3" />
           </svg>
         </label>
-        <label for="" class="form-content__data">
+        <label for="textarea" class="form-content__data">
           comentarios
-          <textarea class="" name="feedback" rows="5" placeholder="Introduzca texto"></textarea>
+          <textarea class="" name="feedback" id="textarea" rows="5" placeholder="Introduzca texto"></textarea>
         </label>
-        <label for="">
-          <input type="checkbox" name="accept" value="terminos-condiciones" checked class="form-content__accept">
+        <div>
+          <svg class="form-content__accept">
+            <use href="images/icon.svg#icon-vector"></use>
+          </svg>
           <p class="form-content__text">Estoy de acuerdo con el boletín informativo y acepto los Términos y Condiciones
           </p>
-        </label>
+        </div>
         <button type="submit" class="form-content__enviar">enviar</button>
       </form>
 
