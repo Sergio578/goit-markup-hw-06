@@ -7,7 +7,7 @@ body {
   --special: #2196f3;
   --black: #212121;
   --gray: #757575;
-  --color: #2f303a;
+  --color: rgb(47, 48, 58);
   --white: #fff;
 }
 
@@ -114,6 +114,7 @@ body {
 
 textarea {
   margin-top: 5px;
+  margin-bottom: 10px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-top: 5px;
@@ -131,18 +132,60 @@ textarea:focus {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-content__accept {
+.form-content__data-checkbox input[type="checkbox"]:checked+.form-content__span .form-content__accept {
   width: 16px;
   height: 15px;
-  margin-top: 10px;
-  position: relative;
+  position: absolute;
+  top: -2px;
+  left: -1px;
+  padding-top: 4px;
+  padding-left: 2px;
+
   fill: var(--white);
-  border: 1px solid #757575;
 }
 
-.form-content__accept:active {
+.form-content__accept {
+  fill: none;
+}
+
+
+/* .form-content__accept {
+  width: 16px;
+  height: 15px;
+  position: absolute;
+  top: -2px;
+  left: -1px;
+  fill: var(--white);
+} */
+
+/* .form-content__accept:active {
   border-radius: 1px solid var(--gray);
   background-color: var(--special);
+} */
+
+.form-relative {
+  position: relative;
+}
+
+.form-content__data-checkbox {
+  display: block;
+  padding-left: 20px;
+
+}
+
+.form-content__span {
+  position: absolute;
+  left: 0px;
+  top: 2px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #757575;
+  border-radius: 2px;
+}
+
+.form-content__data-checkbox input[type="checkbox"]:checked+.form-content__span {
+  background-color: #2196F3;
+  border: none;
 }
 
 .form-content__text {
@@ -483,13 +526,14 @@ header>.container :nth-child(1)>nav>ul>li {
 .images-people {
   position: relative;
   border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
 }
 
 .card-people {
   position: relative;
   left: 20px;
   bottom: 65px;
+  /* box-shadow: 10px 2px 4px rgb(rgb(55, 52, 52)); */
 
 }
 
@@ -541,7 +585,7 @@ footer {
 }
 
 .footer-end {
-  margin-left: 153px;
+  margin-left: 100px;
 }
 
 .list-footer {
@@ -556,7 +600,7 @@ footer {
 
 .networks-social {
   position: absolute;
-  left: 497px;
+  left: 420px;
   top: 64px;
   margin-left: 70px;
   fill: rgba(255, 255, 255, 0.1);
@@ -763,7 +807,7 @@ footer {
 .container-subscribe {
   position: absolute;
   top: 41px;
-  right: 246px;
+  right: 219px;
 }
 
 form {
@@ -777,11 +821,10 @@ form {
   text-transform: uppercase;
 }
 
-input {
+.container-subscribe__input {
   width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
   font-size: 16px;
   padding-top: 15px;
   padding-right: 101px;
@@ -789,7 +832,7 @@ input {
   padding-left: 10PX;
   border-radius: 4px;
   margin-right: 10px;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(50, 49, 58, 0.15);
 
 }
 

@@ -43,13 +43,24 @@
           comentarios
           <textarea class="" name="feedback" id="textarea" rows="5" placeholder="Introduzca texto"></textarea>
         </label>
-        <div>
+        <div class="form-relative">
+          <label class="form-content__data-checkbox">
+            <input type="checkbox" id="input-accept" name="accept" required hidden>
+            <span class="form-content__span">
+              <svg class="form-content__accept">
+                <use href="images/icon.svg#icon-vector"></use>
+              </svg>
+            </span>
+            Estoy de acuerdo con el boletín informativo y acepto los Términos y Condiciones
+          </label>
+        </div>
+        <!-- <div>
           <svg class="form-content__accept">
             <use href="images/icon.svg#icon-vector"></use>
           </svg>
           <p class="form-content__text">Estoy de acuerdo con el boletín informativo y acepto los Términos y Condiciones
           </p>
-        </div>
+        </div> -->
         <button type="submit" class="form-content__enviar">enviar</button>
       </form>
 
@@ -395,7 +406,8 @@
       <h4 class="title-subscribe">suscríbase al boletín informativo</h4>
       <form name="fotter_form">
         <label for="user_email"></label>
-        <input type="email" name="email" id="user_email" class="fondo" placeholder="Correo electronico">
+        <input class="container-subscribe__input" type="email" name="email" id="user_email"
+          placeholder="Correo electronico">
         <button class="button-subscribe" type="submit">
           <svg class="subscribe" width="133" height="30">
             <use href="./images/icon.svg#icon-subscribe"></use>
